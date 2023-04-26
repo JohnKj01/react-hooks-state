@@ -4,13 +4,11 @@ function Counter() {
   const [count, setCount] = useState(0);
 
   function increment() {
-    setCount(count + 1);
+    setCount((currentCount) => currentCount + 1);
+    setCount((currentCount) => currentCount + 1);
   }
 
-  return<div>
-    <h2>Click to count</h2>    
-    <button onClick={increment}>I have been clicked {count} times</button>
-  </div>;
+  return <div onClick={increment}>{count}</div>;
 }
 
 export default Counter;
